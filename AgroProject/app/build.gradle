@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 repositories {
     maven { url 'https://jitpack.io' }
 }
@@ -41,3 +40,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:16.0.1'
     implementation 'com.google.firebase:firebase-database:16.0.1'
 }
+

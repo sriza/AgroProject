@@ -30,7 +30,7 @@ public class Register_customer extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        FirebaseApp.initializeApp(this);
+
 
 
         emailview = findViewById(R.id.email);
@@ -38,7 +38,7 @@ public class Register_customer extends AppCompatActivity {
         registerbtn = findViewById(R.id.register);
 
         progressDialog = new ProgressDialog(this);
-        FirebaseApp.initializeApp(this);        firebaseAuth = FirebaseAuth.getInstance();
+
 
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override

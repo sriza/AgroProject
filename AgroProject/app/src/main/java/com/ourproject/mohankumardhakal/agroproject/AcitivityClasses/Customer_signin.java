@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.ourproject.mohankumardhakal.agroproject.R;
@@ -28,11 +29,13 @@ public class Customer_signin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_signin);
 
-        firebaseAuth = FirebaseAuth.getInstance();
         email_text = findViewById(R.id.email_check);
         password_text = findViewById(R.id.password_check);
         sign_in = findViewById(R.id.sign_in);
         signup = findViewById(R.id.sign_up);
+
+        FirebaseApp.initializeApp(this);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
